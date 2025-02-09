@@ -1,0 +1,40 @@
+{
+  "players": ["spotify", "lollypop", "org.mpris.MediaPlayer2.mpv"],
+  "use_active_player": false,
+  "debug": false,
+  "width": 20,
+  "height": 18,
+  "layout": [
+    { "type": "cover-art" },
+    {
+      "type": "container",
+      "direction": "vertical",
+      "children": [
+        { "type": "label", "text": "$title", "align": "center" },
+        { "type": "label", "text": "$artists", "align": "center" },
+        { "type": "empty", "size": 1 },
+        {
+          "type": "container",
+          "height": 1,
+          "flex": "space-around",
+          "children": [
+            { "type": "button", "text": "󰒮", "action": "prev()" },
+            { "type": "button", "text": "$status-icon", "action": "play_pause()" },
+            { "type": "button", "text": "󰒭", "action": "next()" }
+          ]
+        },
+        { "type": "empty", "size": 1 },
+        { "type": "progress", "progress": { "char": "▋" }, "empty": { "char": "░", "fg": {"Rgb": [50, 50, 65]} } },
+        {
+          "type": "container",
+          "height": 1,
+          "flex": "space-between",
+          "children": [
+            { "type": "label", "text": "$position", "align": "left" },
+            { "type": "label", "text": "$length", "align": "right" }
+          ]
+        }
+      ]
+    }
+  ]
+}
